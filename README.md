@@ -30,5 +30,7 @@ test_file：verilog/test/test_sort_top.sv
 HT Verilog:
 test_file: verilog_high_performance/test/test_sort_top.sv
 
+To modify the experimental settings, such as the maximum number of elements to sort or other hardware parameters, please edit verilog(verilog_high_performance)/sort_define.v
+
 Note: 
 The Verilog code has not undergone industry-grade testing and may contain some bugs.
