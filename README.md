@@ -8,3 +8,27 @@ This paper proposes OnSort, a parallel comparison-free sorting architecture with
 ## Note
 Due to property restrictions, we are unable to include the SRAM .lib and .db files in the open-source repository. To ensure functional correctness, the hardware code uses registers as a substitute for SRAM. To reproduce the frequency, power, and area reported in the paper, you need to generate the SRAM libraries using a memory compiler, replace the SRAM instances in sort_dp_bank_wrap.v, and set SORT_FUC_REG_EN to 0 in the sort_define file.
 
+
+## Details and How to Run
+RE Simulator:
+```sh
+cd simulator/test/
+./run_test.sh
+```
+
+HT Simulator:
+```sh
+cd simulator_high_performance/test/
+./run_test.sh
+```
+
+To modify the experimental settings, such as the maximum number of elements to sort or other hardware parameters, please edit simulator(simulator_high_performance)/top/const.py.
+
+RE Verilog:
+test_file：verilog/test/test_sort_top.sv
+
+HT Verilog:
+test_file: verilog_high_performance/test/test_sort_top.sv
+
+Note: 
+The Verilog code has not undergone industry-grade testing and may contain some bugs.
