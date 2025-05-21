@@ -24,11 +24,20 @@ cd simulator_high_performance/test/
 
 To modify the experimental settings, such as the maximum number of elements to sort or other hardware parameters, please edit simulator(simulator_high_performance)/top/const.py.
 
-RE Verilog:
-test_file：verilog/test/test_sort_top.sv
+RE Verilog:  
+test_file：verilog/test/test_sort_top.sv  
+filelist: verilog/sort_filelist.f
+```sh
+vlog -f sort_filelist.f
+```
 
-HT Verilog:
-test_file: verilog_high_performance/test/test_sort_top.sv
+HT Verilog:  
+test_file: verilog_high_performance/test/test_sort_top.sv  
+filelist: verilog_high_performance/sort_filelist.f  
+```sh
+vlog -f sort_filelist.f
+```
+
 
 To modify the experimental settings, such as the maximum number of elements to sort or other hardware parameters, please edit verilog(verilog_high_performance)/sort_define.v
 
